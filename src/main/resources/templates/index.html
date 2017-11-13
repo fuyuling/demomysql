@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Hello World!</title>
+    <style>
+        #main {
+            height: 400px;
+            border: 1px solid #c3c3c3;
+            display: -webkit-flex; /* Safari */
+            -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+            display: flex;
+        }
+
+        #main div {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h1 th:inline="text">Hello</h1>
+<p th:text="${hello}"></p>
+<div id="main">
+    <div style="background-color:coral;">A</div>
+    <div style="background-color:lightblue;">B</div>
+    <div style="background-color:khaki;">C</div>
+    <div style="background-color:pink;">D</div>
+    <div style="background-color:lightgrey;">E</div>
+    <div style="background-color:lightgreen;">F</div>
+</div>
 </body>
 </html>
